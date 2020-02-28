@@ -1,0 +1,86 @@
+.toolbar_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.area_button {
+  height: fit-content;
+  width: fit-content;
+  padding: 0.8rem 0.8rem;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: #616161;
+}
+
+.area_count {
+  border-radius: 100%;
+  padding: 0.5rem;
+  margin: auto 0 auto 0.5rem;
+  font-size: 1rem;
+  background-color: #e0e0e0;
+}
+
+.area_button:focus {
+  background-color: white;
+}
+
+.filter_container {
+  display: flex;
+  padding: 0 10rem;
+  justify-content: flex-start;
+}
+
+.filter_container > p {
+  padding: 0.5rem 1rem;
+  margin-top: -1.5rem;
+  margin-right: -4rem;
+  background-color: white;
+  z-index: 10;
+}
+.filter {
+  cursor: pointer;
+  width: 20rem;
+  padding: 0 2rem;
+  margin: 0 2rem;
+  border: 0.1rem solid #e0e0e0;
+  height: min-content;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.filter_dropdown_visible {
+  display: block;
+  position: absolute;
+  top: 10;
+  cursor: pointer;
+}
+
+.property_card_container {
+  display: flex;
+  width: 100%;
+}
+
+.property_card {
+  display: grid;
+  height: 15rem;
+  width: 10rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  box-shadow: 0.1rem 0.1rem 0.2rem gainsboro;
+}
+
+.property_image {
+  width: 100%;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.property_overlay {
+  grid-row: 2/-1;
+  clip-path: polygon(70% 70%, 100% 80%, 100% 100%, 0 100%, 0 80%);
+  background: linear-gradient(#18ffff, #00b8d4);
+}
